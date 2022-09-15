@@ -80,7 +80,7 @@ function TopBar({ }: Props) {
 
             {
                 // onMouseLeave={() => hideCart(true)}
-                isCartOpen && <div onMouseLeave={() => hideCart(true)} onMouseEnter={() => hideCart(false)} className={`absolute flex flex-col ${width < 600 ? "w-full right-0 h-[30vh] max-h-56" : "w-56  right-20  h-44"} rounded-lg shadow-xl z-10 bg-white`}>
+                isCartOpen && <div onMouseLeave={() => hideCart(true)} onMouseEnter={() => hideCart(false)} className={`absolute flex flex-col ${width < 600 ? "w-full right-0 h-[30vh] max-h-56" : "w-56  right-20 h-44"} rounded-lg shadow-xl z-10 bg-white`}>
                     <p className='font-bold p-4'>Cart</p>
                     <hr className="solid" />
 
@@ -91,14 +91,14 @@ function TopBar({ }: Props) {
                             </div>
                             :
                             <div className='flex-grow flex flex-col p-4'>
-                                <div className='h-[60%] overflow-y-auto'>
+                                <div className='h-14 overflow-y-auto'>
                                     {
                                         cart && cart.map((items, i) => (
                                             <CartItems items={items} index={i} />
                                         ))
                                     }
                                 </div>
-                                <div className='h-[40%]'>
+                                <div className='flex-grow'>
                                     <button className={`text-white text-xs font-semibold bg-PRIMARY_ORANGE rounded-lg hover:bg-orange-500 w-full ${width <= 600 ? "h-10" : "h-full"}`}>Checkout</button>
                                 </div>
                             </div>

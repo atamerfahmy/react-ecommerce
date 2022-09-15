@@ -7,9 +7,6 @@ import { Provider } from 'react-redux'
 import store from './store'
 import {
   BrowserRouter,
-  Routes,
-  Route,
-  useRoutes,
 } from "react-router-dom";
 
 const root = ReactDOM.createRoot(
