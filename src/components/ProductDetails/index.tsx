@@ -20,10 +20,6 @@ function ProductDetails({ }: Props) {
     const cart: Array<ICartItems> = useAppSelector((state): Array<ICartItems> => state.cart.value);
     const dispatcher = useAppDispatch();
 
-    console.log(productId);
-    // https://picsum.photos/200/300
-
-
     const [images, setImages] = useState([{
         download_url: ""
     }]);

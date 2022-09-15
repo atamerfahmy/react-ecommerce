@@ -8,7 +8,6 @@ type Props = {}
 function Home({ }: Props) {
 
     const products = useAppSelector(state => state.products.value);
-    console.log({ products, type: typeof products[0] });
 
     return (
         <div className='p-10'>

@@ -25,7 +25,7 @@ function Card({ product, index }: Props) {
 
     return (
         <div className="w-full flex flex-col gap-3 hover:bg-PRIMARY_ORANGE/5 rounded-md" onClick={handleClick}>
-            <img className="w-full rounded-md" src={`https://picsum.photos/200/300?random=${index}`} alt="Profile Picture" />
+            <img className="w-full rounded-md" src={product.image} alt="Profile Picture" />
             <div className='flex flex-col'>
                 <p className='text-sm font-medium'>{product.title}</p>
                 <p className='text-sm font-medium text-gray-500/80 italic'>{product.category}</p>

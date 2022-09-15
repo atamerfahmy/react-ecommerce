@@ -9,7 +9,6 @@ type Props = {}
 function Login({ }: Props): JSX.Element {
 
     let { width, height } = getWindowDimensions();
-    console.log(width);
 
     const styles = useMemo(() => {
         return {

@@ -24,7 +24,6 @@ function App() {
 
   const routing = useRoutes(AppRoutes(loggedIn));
   let location = useLocation();
-  console.log(location);
 
   useEffect(() => {
 
@@ -35,9 +34,7 @@ function App() {
     fetch('https://fakestoreapi.com/products')
       .then(res => res.json())
       .then(json => dispatcher(setProducts(json)))
-    // dispatcher(addToCart({
-    //   name: "product 1"
-    // }))
+
   }, [])
 
   return (

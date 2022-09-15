@@ -21,11 +21,6 @@ function TopBar({ }: Props) {
     const showCart = () => setIsCartOpen(true);
     const hideCart = (set: boolean) => hideCartWindow(set);
 
-    useEffect(() => {
-        console.log(isCartOpen);
-
-    }, [isCartOpen])
-
     var timer = -1;
 
     function hideCartWindow(set: boolean) {
@@ -35,9 +30,7 @@ function TopBar({ }: Props) {
             timer = window.setTimeout(function () {
                 setIsCartOpen(false);
             }, 1000);
-            console.log(timer);
         }
-        //var millisecBeforeRedirect = 10000; 
     }
 
     return (
